@@ -1,0 +1,77 @@
+// SPDX-License-Identifier: LGPL-3.0+
+
+#ifndef WM_SENSORS_LIB_HARDWARE_MOTHERBOARD_LPC_IDENTIFICATION_HXX
+#define WM_SENSORS_LIB_HARDWARE_MOTHERBOARD_LPC_IDENTIFICATION_HXX
+
+#include <string_view>
+
+namespace wm_sensors::hardware::motherboard::lpc {
+	enum class Chip : unsigned short
+	{
+		unknown = 0,
+
+		ATK0110 = 0x0110,
+
+		F71808E = 0x0901,
+		F71811 = 0x1007,
+		F71858 = 0x0507,
+		F71862 = 0x0601,
+		F71869 = 0x0814,
+		F71869A = 0x1007,
+		F71878AD = 0x1106,
+		F71882 = 0x0541,
+		F71889AD = 0x1005,
+		F71889ED = 0x0909,
+		F71889F = 0x0723,
+
+		IT8620E = 0x8620,
+		IT8628E = 0x8628,
+		IT8631E = 0x8631,
+		IT8655E = 0x8655,
+		IT8665E = 0x8665,
+		IT8686E = 0x8686,
+		IT8688E = 0x8688,
+		IT8689E = 0x8689,
+		IT8705F = 0x8705,
+		IT8712F = 0x8712,
+		IT8716F = 0x8716,
+		IT8718F = 0x8718,
+		IT8720F = 0x8720,
+		IT8721F = 0x8721,
+		IT8726F = 0x8726,
+		IT8728F = 0x8728,
+		IT8771E = 0x8771,
+		IT8772E = 0x8772,
+		IT879XE = 0x8733,
+
+		NCT610XD = 0xc452,
+		NCT6771F = 0xb470,
+		NCT6776F = 0xc330,
+		NCT6779D = 0xc560,
+		NCT6791D = 0xc803,
+		NCT6792D = 0xc911,
+		NCT6792DA = 0xc913,
+		NCT6793D = 0xd121,
+		NCT6795D = 0xd352,
+		NCT6796D = 0xd423,
+		NCT6796DR = 0xd42A,
+		NCT6797D = 0xd451,
+		NCT6798D = 0xd42B,
+		NCT6687D = 0xd592,
+		NCT6683D = 0xc732,
+
+		W83627DHG = 0xa020,
+		W83627DHGP = 0xb070,
+		W83627EHF = 0x8800,
+		W83627HF = 0x5200,
+		W83627THF = 0x8280,
+		W83667HG = 0xa510,
+		W83667HGB = 0xb350,
+		W83687THF = 0x8541
+	};
+
+	std::string_view chip_name(Chip chip);
+
+} // namespace wm_sensors::hardware::motherboard::lpc
+
+#endif

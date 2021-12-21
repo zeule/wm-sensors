@@ -1,0 +1,5 @@
+function(auto_source_group _target)
+	get_target_property(_sources ${_target} SOURCES)
+	get_target_property(_srcDir ${_target} SOURCE_DIR)
+	source_group(TREE ${_srcDir} FILES ${_sources})
+endfunction()

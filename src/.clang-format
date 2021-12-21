@@ -1,0 +1,121 @@
+---
+# We'll use defaults from the LLVM style, but with 4 columns indentation.
+BasedOnStyle: LLVM
+Language: Cpp
+IndentWidth: 4
+ColumnLimit: 120
+
+AccessModifierOffset: -4
+AlignAfterOpenBracket: Align
+# AlignArrayOfStructures: Left
+AlignConsecutiveMacros: true
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignEscapedNewlines: Left
+AlignOperands: true
+AlignTrailingComments: true
+AlignAfterOpenBracket: AlwaysBreak
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLambdasOnASingleLine: Inline
+AllowShortLoopsOnASingleLine: false
+# unused AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments: true
+# BinPackParameters: true
+# ? BraceWrapping:
+# unused BreakAfterJavaFieldAnnotations: (bool)
+BreakBeforeBinaryOperators: None
+BreakBeforeBraces: WebKit
+BreakBeforeTernaryOperators: false
+BreakConstructorInitializers: BeforeComma
+# BreakInheritanceList: BeforeComma
+BreakStringLiterals: true
+# CommentPragmas:
+CompactNamespaces: false
+#ConstructorInitializerAllOnOneLineOrOnePerLine:
+ConstructorInitializerIndentWidth: 4
+#ContinuationIndentWidth:
+Cpp11BracedListStyle: true
+# unused DerivePointerAlignment:
+# unused DisableFormat:
+# unused ExperimentalAutoDetectBinPacking:
+EmptyLineBeforeAccessModifier: LogicalBlock
+FixNamespaceComments: true
+ForEachMacros: ['BOOST_FOREACH', 'FOREACH', 'Q_FOREACH', 'foreach']
+TypenameMacros: ['STACK_OF', 'LIST_ENTRY']
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex:           '^"[\./]*stdafx\.h.*"'
+    Priority:        5
+  - Regex:           '^"\./.*"' # local project includes "./name"
+    Priority:        10
+  - Regex:           '^"\.\./.*"' # local project includes "../name"
+    Priority:        11
+  - Regex:           '"[[:alnum:]]+\-config\.h"' # project config files
+    Priority:        12
+  - Regex:           '^"[[:alnum:]/\.]+"' # "name.h"
+    Priority:        20
+  - Regex:           '^<.+/.+>' # <some/name.h>
+    Priority:        30
+  - Regex:           '^<Windows\.h>' # <Windows.h>
+    Priority:        39
+  - Regex:           '^<[[:alnum:]]+\.h>' # <name.h>
+    Priority:        40
+  - Regex:           '^<[a-z_]+>' # C++ std includes <name>
+    Priority:        50
+
+  - Regex:           '"[[:alnum:]]+\-export\.h"' # project export files
+    Priority:        99
+#unused IncludeIsMainRegex:
+IndentCaseLabels: true
+IndentPPDirectives: AfterHash
+IndentWidth: 4
+IndentWrappedFunctionNames: false
+KeepEmptyLinesAtTheStartOfBlocks: false
+MacroBlockBegin: "^BEGIN_[A-Z]+_MAP.*"
+MacroBlockEnd: "END_[A-Z]+_MAP.*"
+MaxEmptyLinesToKeep: 2
+NamespaceIndentation: All
+# unused NamespaceMacros:
+# unused PenaltyBreakComment:
+# unused PenaltyBreakFirstLessLess:
+# unused PenaltyBreakString:
+# unused PenaltyBreakTemplateDeclaration:
+# unused PenaltyExcessCharacter:
+# unused PenaltyReturnTypeOnItsOwnLine:
+PointerAlignment: Left
+#RawStringFormats:
+ReflowComments: true
+SortIncludes: true
+SortUsingDeclarations: true
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCpp11BracedList: false
+# unused SpaceBeforeCtorInitializerColon: false
+SpaceBeforeInheritanceColon: false
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 1
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+SpacesInContainerLiterals: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+Standard: Latest
+StatementMacros: ['Q_UNUSED', 'X_UNUSED', 'Q_OBJECT']
+TabWidth: 4
+UseTab: ForIndentation
+...
+
+# kate: syntax YAML;

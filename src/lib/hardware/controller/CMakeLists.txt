@@ -1,0 +1,11 @@
+if (Hidapi_FOUND)
+	add_subdirectory(AeroCool)
+	add_subdirectory(AquaComputer)
+	add_subdirectory(nzxt)
+endif()
+
+find_package(Ftd2xx)
+if (Ftd2xx_FOUND)
+	add_subdirectory(tbalancer)
+	target_link_libraries(wm-sensors PRIVATE Ftd2xx::Ftd2xx)
+endif()

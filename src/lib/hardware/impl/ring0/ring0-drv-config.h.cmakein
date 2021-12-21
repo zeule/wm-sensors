@@ -1,0 +1,2 @@
+#define WINRING_DRIVER_FILE "@_winRingDriverFile@"
+#define INPOUT_DRIVER_FILE "@_inpoutDriverFile@"

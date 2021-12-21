@@ -1,0 +1,8 @@
+#ifndef WM_SENSOS_CONFIG_H
+#define WM_SENSORS_CONFIG_H
+
+#cmakedefine HAVE_STRNDUP
+
+#define SIZE_OF_VOID_P @CMAKE_SIZEOF_VOID_P@
+
+#endif

@@ -1,0 +1,1 @@
+#define WMS_VERSION "@WMS_FULL_VERSION_STR@"
