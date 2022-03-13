@@ -41,3 +41,5 @@ bool wm_sensors::hardware::motherboard::Motherboard::probe(SensorChipTreeNode& s
 
 	return lpcio.chips().size() > 0;
 }
+
+static wm_sensors::impl::PersistentHardwareRegistrator<wm_sensors::hardware::motherboard::Motherboard> registrator;
