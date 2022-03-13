@@ -45,7 +45,7 @@ wm_sensors::TreeNode& wm_sensors::TreeNode::child(std::string_view path)
 	for (std::size_t nextSep = subPath.find(pathSeparator); nextSep != std::string::npos;
 		nextSep = subPath.find(pathSeparator)) {
 		node = node->children_.insert({std::string(path.substr(0, nextSep)), node->create(node)}).first->second.get();
-		subPath = subPath.substr(nextSep);
+		subPath = subPath.substr(nextSep + 1);
 	}
 	return subPath.empty() ? *node :
                              *node->children_.insert({std::string(subPath), node->create(node)}).first->second.get();
