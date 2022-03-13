@@ -51,7 +51,8 @@ void wsensors::ui::SensorsTree::updateSensorData(
 	const auto setChildText = [=, this, &itemData, &text](int i, double v) {
 		formatTo(text, v, type);
 		itemData.iSubItem = i;
-		itemData.mask = TLVIF_TEXT;
+		itemData.format = TLVIFMT_RIGHT;
+		itemData.mask = TLVIF_TEXT | TLVIF_FORMAT;
 		itemData.pszText = const_cast<TCHAR*>(text.c_str());
 		SetSubItem(item, &itemData);
 		RECT r;

@@ -48,7 +48,7 @@ LRESULT wsensors::ui::MainWindow::onCreate(LPCREATESTRUCT /*lpcs*/)
 	int arrParts[] = {ID_DEFAULT_PANE, IDS_STRING_STATUS_PANEL_STATS, IDS_MAIN_STATUS_PANEL_STATUS};
 	statusBar_.SetPanes(arrParts, sizeof(arrParts) / sizeof(int), false);
 	sensorsTreeContainer_.Create(
-	    m_hWnd, rcDefault, NULL, WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_HSCROLL, WS_EX_CLIENTEDGE);
+	    m_hWnd, rcDefault, NULL, WS_CHILD | WS_VISIBLE, WS_EX_CLIENTEDGE);
 	m_hWndClient = sensorsTreeContainer_.m_hWnd;
 	ATLASSERT(::IsWindow(m_hWndClient));
 

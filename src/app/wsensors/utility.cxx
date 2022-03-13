@@ -33,7 +33,7 @@ void wsensors::formatTo(std::basic_string<TCHAR>& str, double value, wm_sensors:
 		case SensorType::energy: out = fmt::format_to(out, _T("{:.3f} J"), value); break;
 		case SensorType::humidity: out = fmt::format_to(out, _T("{:.3f} %"), value); break;
 		case SensorType::fan: out = fmt::format_to(out, _T("{:.0f} RPM"), value); break;
-		case SensorType::pwm: out = fmt::format_to(out, _T("{:f} PWM"), value); break;
+		case SensorType::pwm: out = fmt::format_to(out, _T("{:.2f} %"), value); break;
 		case SensorType::data: {
 			if (value > 1024ull * 1024ull * 1024ull * 1024ull) {
 				out = fmt::format_to(out, _T("{:.3f} TiB"), value / 1024. / 1024. / 1024. / 1024.);
